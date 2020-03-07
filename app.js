@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('./db/db');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const port = process.env.PORT || 5000;
 const app= express();
 
 app.use(bodyParser.json());
@@ -18,9 +18,9 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.listen(3000, '0.0.0.0', function()
+app.listen(port, function()
 {
-    console.log('Server Running at Port 3000');
+    console.log(`Server Running at Port ${port}`);
 });
 
 const userRoutes = require('./routes/user.routes');
