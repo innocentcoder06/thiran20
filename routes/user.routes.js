@@ -37,10 +37,23 @@ router.post('/existuser',(req,res)=>{
     res.send({cnt});
   }).catch((err)=>{
     console.log(err);
+  });  
+});
+
+router.post('/existphone', (req, res) => {
+  User.count({ 'phoneno': req.body.phoneno }).then((cnt) => {
+    res.send({cnt});
+  }).catch((err) => {
+    console.log(err);
   });
+});
 
-
-  
+router.post('/existrollno',(req,res)=>{
+  User.count({ 'rollno':req.body.rollno }).then((cnt)=>{
+    res.send({cnt});
+  }).catch((err)=>{
+    console.log(err);
+  });  
 });
 
 
