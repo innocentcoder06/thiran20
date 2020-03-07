@@ -34,7 +34,7 @@ newUser.save().then((data)=>{
 
 router.post('/existuser',(req,res)=>{
   User.count({'email':req.body.email}).then((cnt)=>{
-    res.send({cnt});
+    res.send({count: cnt});
   }).catch((err)=>{
     console.log(err);
   });  
@@ -42,7 +42,7 @@ router.post('/existuser',(req,res)=>{
 
 router.post('/existphone', (req, res) => {
   User.count({ 'phoneno': req.body.phoneno }).then((cnt) => {
-    res.send({cnt});
+    res.send({count: cnt});
   }).catch((err) => {
     console.log(err);
   });
@@ -50,7 +50,7 @@ router.post('/existphone', (req, res) => {
 
 router.post('/existrollno',(req,res)=>{
   User.count({ 'rollno':req.body.rollno }).then((cnt)=>{
-    res.send({cnt});
+    res.send({count: cnt});
   }).catch((err)=>{
     console.log(err);
   });  
