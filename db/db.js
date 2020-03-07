@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost:27017/Thiran', function(err){
+mongoose.connect('mongodb+srv://nanthsiva06:gopal26@taskmanager-ucdkw.mongodb.net/Thiran2020?retryWrites=true&w=majority', function(err){
     if(!err)
         console.log('DB Connected');
     else
