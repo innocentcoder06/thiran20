@@ -62,7 +62,7 @@ userScheama.pre('save',function(next){
           secure: true,  //true for 465 port, false for other ports
           auth: {
             user: 'teamthiran2020@gmail.com',
-            pass: 'thiran2020'
+            pass: 'thiran2021'
           }
         });
       
